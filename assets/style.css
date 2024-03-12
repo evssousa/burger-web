@@ -4,6 +4,7 @@
     --black: #141414;
     --white: #fff;
     --orange: #fe6a0f;
+    --gray: #999;
 }
 
 * {
@@ -37,4 +38,79 @@ body {
 
 .logo a span {
     color: var(--orange);
+}
+
+/* HEADER */
+header .container {
+    display: flex;
+    align-items: center;
+    padding: 45px 20px;
+    gap: 50px;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+header nav .leftside {
+    display: flex;
+    flex: 1;
+}
+
+header nav li {
+    margin: 0 30px;
+}
+
+header nav li a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+header nav li a:hover {
+    color: var(--gray);
+}
+
+header nav .button {
+    display: block;
+    border: 1px solid var(--white);
+    padding: 15px 30px;
+    border-radius: 5px;
+    color: var(--white);
+    text-decoration: none;
+}
+
+header nav .button:hover {
+    color: var(--white);
+    border-color: var(--gray);
+}
+
+header .menu {
+    display: none;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+header .menu-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+header .menu-icon div {
+    height: 6px;
+    background-color: var(--white);
+}
+
+@media (max-width: 820px) {
+    header nav {
+        display: none;
+    }
+    header .menu {
+        display: flex;
+    }
 }
